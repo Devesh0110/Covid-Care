@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-center {
+  padding: 1em;
+  background: white;
+  width: 100%;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-header img {
+  cursor: pointer;
+  height: 50px;
+  float: left;
+  margin: 1em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  /*   height: 80vh; */
+  height: 0;
+  overflow: hidden;
+}
+
+.show-links {
+  height: 80vh;
+}
+.links li {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1em 1em;
+  margin: auto;
+}
+.links li a {
+  color: #121212;
+
+}
+.links li a:hover {
+  border-bottom: 2px solid black;
+}
+.social-icons {
+  display: flex;
+  height: 0vh;
+  overflow: hidden;
+}
+
+.show-icons {
+  height: 10vh;
+  align-items: center;
+  border-top: 2px solid black;
+  overflow: visible;
+}
+.social-icons li {
+  margin: auto;
+
+  font-size: 1.5rem;
+  transition: all 0.5s linear;
+}
+
+.social-icons li a {
+  padding: 0.4em;
+  color: black;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+.social-icons li a:hover {
+  background: black;
+  color: white;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: black;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+.nav-toggle:hover {
+  color: black;
+  transform: rotate(90deg);
+  outline: none;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-header {
+    display: block;
+  }
+
+  .links {
+    flex-direction: row;
+    height: auto;
+    display: flex;
+  }
+  .links li {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+    margin: auto;
+  }
+  .social-icons {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: none;
+    padding:1em;
+  }
+
+  .social-icons li {
+    margin: auto;
+
+    font-size: 1.2rem;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  footer {
+    display: none;
+  }
+}
+nav{
+    font-family:Arial;
+}
+        .a{
+            width: 70px;
+        }
+        .simplemessage{
+            color:rgb(247, 235, 235);
+        }
+        body{
+            background-image: url(chatbot.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            color:white;
+            background-size: cover;
+        }
+        #textbox{
+            background-color: transparent;
+        }
+        #textbox:focus{
+            background-color: white;
+        }
+        h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .dot{
+            color: green;
+        }
+        .s:hover{
+            background-color: green;
+        }
+        #sendBtn{
+            background-attachment: fixed;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+
+    <nav>
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img style="width:90px;height:80px;margin:0px;padding:0px;" src="img.png"  alt="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <ul class="links">
+            <li>
+              <a href="index.php">home</a>
+            </li>
+            <li>
+              <a href="covid.php">Covid-info</a>
+            </li>
+            <li>
+              <a href="search.php">Search donors</a>
+            </li>
+            <li>
+              <a href="donate-form.php">Volunteer</a>
+            </li>
+          </ul>
+          <!-- social media -->
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.facebook.com/deveshsingh0110/">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+      
+            <li>
+              <a href="linkedin.com/in/devesh-singh-a98a3a1b7">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    
+    <div style="float: right;">
+        
+    </div><br>
+    <div class="container">
+        <div class="text-center"><h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: rgb(68, 68, 68);"> CHATBOT</h1></div>
+        <div class="media">
+            <img class="rounded-circle float-left img-thumbnail a" src="img-chatbot.png" alt="Generic placeholder image">     <!--For the proper dp visuals-->
+            <div class="media-body">
+              <h5 style="margin:10px">DEV</h5>
+              <span style="margin-left:10px">Online <i class="fa fa-circle dot" aria-hidden="true"></i></span>  <!--Shows status of chatbot-->
+            </div>
+          </div>
+    </div>
+    <br>
+    <div id="DEVcontainer" class="container overflow-auto simplemessage" style="height:500px; border: 2px solid rgb(255, 255, 255);">
+    <!--   <div class="w-50 float-left shadow-sm bg-dark rounded" style="margin:10px; padding:5px;">
+        <span>DEV:</span>
+        <span style="margin-top: 10px; padding: 10px;">How are you?</span>
+        </div>
+        <div class="w-50 float-right shadow-sm bg-dark rounded" style="margin:10px; padding:5px;">
+            <span>You:</span>
+            <span style="margin-top: 10px; padding: 10px;">Great</span>
+            </div>-->
+   
+        <div class="input-group overflow-auto" style="position: relative; bottom: -90%; border:2px solid rgb(255, 255, 255);">
+            <input id="textbox" type="text" class="form-control">
+                <div class="input-group-append">
+                     <button id="sendBtn" type="button" class="btn btn-dark s">Send</button>
+                </div>
+
+        </div>
+
+    </div>    
+
+<script src="chatbot-2.js"></script>
+</body>
+</html>
