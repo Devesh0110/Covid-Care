@@ -1,2 +1,1 @@
-I have designed a user detection and analysis system that will help people locate others according to respective requirements.
-Apart from all the above features, this portal helps others get exact information about the current status of covid-19 in the world, along with providing relevant information about vaccines and guidelines for the same. It also has the facility of interaction with a custom designed chatbot about related topics.
+
